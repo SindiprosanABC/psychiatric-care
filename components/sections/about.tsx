@@ -7,7 +7,7 @@ export const About = () => {
     <section id="about" className="bg-white py-20">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center gap-12 lg:flex-row">
-          <div className="order-2 w-full lg:order-1 lg:w-1/2">
+          <div className="order-2 w-full lg:order-1">
             <h2 className="mb-6 text-3xl font-bold text-[#6b2b2c]">About Me</h2>
             <p className="mb-4 text-gray-600">
               As a specialized child and adolescent psychiatrist, I have
@@ -31,14 +31,14 @@ export const About = () => {
               </Button>
             </div>
           </div>
-          <div className="order-1 w-full lg:order-2 lg:w-1/2">
+          <div className="order-1 w-full lg:order-2">
             <div className="relative">
-              <div className="relative mx-auto h-64 w-64 overflow-hidden rounded-2xl md:h-80 md:w-96 lg:h-96 lg:w-full">
+              <div className="relative mx-auto h-64 w-64 overflow-hidden rounded-2xl md:h-80 md:w-96 lg:h-[30rem] lg:w-full xl:h-[36rem]">
                 <Image
                   src="/Image_fx_2.jpg"
                   alt="Doctor's portrait"
                   fill
-                  className="object-cover"
+                  className="obje object-cover"
                 />
               </div>
               <div className="absolute -right-6 -bottom-6 rounded-xl bg-[#ffe4cf] p-4 shadow-lg">

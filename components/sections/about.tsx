@@ -35,7 +35,7 @@ export const About = () => {
             <div className="relative">
               <div className="relative mx-auto h-64 w-64 overflow-hidden rounded-2xl md:h-80 md:w-96 lg:h-96 lg:w-full">
                 <Image
-                  src="/image_fx_2.jpg"
+                  src="/Image_fx_2.jpg"
                   alt="Doctor's portrait"
                   fill
                   className="object-cover"

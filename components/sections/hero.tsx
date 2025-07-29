@@ -1,6 +1,7 @@
 import { ArrowRight, Calendar } from "lucide-react";
 import { Button } from "../button";
 import Image from "next/image";
+import Link from "next/link";
 
 export const Hero = () => {
   return (
@@ -9,24 +10,29 @@ export const Hero = () => {
         <div className="flex flex-col items-center py-12 md:py-24 lg:flex-row">
           <div className="mb-12 w-full pr-0 lg:mb-0 lg:w-1/2 lg:pr-16">
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-[#6b2b2c] md:text-5xl">
-              Specialized Psychiatric Care.
-              <br />
-              For Every Age.
+              Dra. Flaviana Becker Dartora
             </h1>
-            <p className="mb-8 max-w-lg text-lg text-gray-600">
-              Comprehensive psychiatric services for children, adolescents, and
-              adults in a supportive and understanding environment.
+            <p className="mb-8 max-w-lg text-xl text-gray-600">
+              Psiquiatra para crianças, adolescentes e adultos.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
-              <Button className="rounded-full bg-[#6b2b2c] px-8 text-white hover:bg-[#5a2324]">
-                Book Consultation <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button
-                variant="outline"
-                className="rounded-full border-[#6b2b2c] px-8 text-[#6b2b2c]"
+              <Link
+                href="https://wa.me/551338777780?text=Ol%C3%A1,%20estou%20iniciando%20uma%20conversa%20pelo%20site%20do%20SindiprosanABC"
+                target="_blank"
               >
-                Learn More
-              </Button>
+                <Button className="rounded-full bg-[#6b2b2c] px-8 text-white hover:bg-[#5a2324]">
+                  Marque uma consulta <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+
+              <Link href={"/#about"}>
+                <Button
+                  variant="outline"
+                  className="rounded-full border-[#6b2b2c] px-8 text-[#6b2b2c]"
+                >
+                  Quem eu sou
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="relative w-full lg:w-1/2">

@@ -1,6 +1,4 @@
 import Image from "next/image";
-import { Button } from "../button";
-import { ArrowRight } from "lucide-react";
 
 export const About = () => {
   return (
@@ -8,28 +6,30 @@ export const About = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center gap-12 lg:flex-row">
           <div className="order-2 w-full lg:order-1">
-            <h2 className="mb-6 text-3xl font-bold text-[#6b2b2c]">About Me</h2>
+            <h2 className="mb-6 text-3xl font-bold text-[#6b2b2c]">
+              Sou Flaviana Becker Dartora
+            </h2>
             <p className="mb-4 text-gray-600">
-              As a specialized child and adolescent psychiatrist, I have
-              dedicated my career to understanding and treating the unique
-              mental health challenges faced by young people and their families.
+              Médica  formada no ano de 2003 pela PUCRS, especializada em
+              Psiquiatria pela FFFCMPA/CEJBF e em Psiquiatria da Infância e
+              Adolescência pela UFRGS/CELG, na cidade de Porto Alegre.
             </p>
             <p className="mb-4 text-gray-600">
-              After completing my training in adult psychiatry, I pursued
-              additional specialization that enables me to comprehensively
-              assess behaviors and emotions in children and adolescents, while
-              considering their family, school, and social contexts.
+              Tenho Título de Especialista em Psiquiatria e Título de
+              Especialista em Psiquiatria da Infância e Adolescência (AMB/ABP –
+              RQE 85551/85551-1). Tenho pós-graduação em Psicoterapia
+              Cognitivo-comportamental, Terapia Cognitivo-comportamental da
+              Infância e Adolescência, em Transtorno do Espectro Autista e em
+              Intervenções Precoces Baseadas no Modelo Denver.
             </p>
             <p className="mb-4 text-gray-600">
-              My approach is holistic and patient-centered, focusing on creating
-              individualized treatment plans that address each person s specific
-              needs and circumstances.
+              Acredito no atendimento baseado no bom vínculo com o paciente e
+              seus familiares, embasado em evidências científicas, enxergando as
+              pessoas na sua individualidade. Tenho como objetivo uma visão
+              ampla dos processos de saúde e doença dentro do meu trabalho, pois
+              dessa forma acredito conseguir acolher e orientar cada situação de
+              forma compreensiva e afetiva.
             </p>
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <Button className="rounded-full bg-[#6b2b2c] px-8 text-white hover:bg-[#5a2324]">
-                My Qualifications <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
           </div>
           <div className="order-1 w-full lg:order-2">
             <div className="relative">

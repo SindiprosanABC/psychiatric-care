@@ -1,6 +1,4 @@
-import Link from "next/link";
 import { Card, CardContent } from "../card";
-import { ArrowRight } from "lucide-react";
 
 export const Services = () => {
   return (
@@ -8,10 +6,10 @@ export const Services = () => {
       <div className="container mx-auto px-4">
         <div className="mx-auto mb-16 max-w-3xl text-center">
           <h2 className="mb-4 text-3xl font-bold text-[#6b2b2c]">
-            Comprehensive Psychiatric Services
+            Nossos serviços
           </h2>
           <p className="text-gray-600">
-            Specialized care for different age groups and mental health needs
+            Cuidados especializado para diferentes grupos de idade
           </p>
         </div>
 
@@ -38,20 +36,16 @@ export const Services = () => {
                 </svg>
               </div>
               <h3 className="mb-3 text-xl font-bold text-[#6b2b2c]">
-                Adult Care
+                Atendimento de Adultos
               </h3>
               <p className="mb-6 text-gray-600">
-                Comprehensive assessment through anamnesis, where we discuss
-                your routine, feelings, behaviors, and life story to develop a
-                diagnostic hypothesis and determine if medication therapy is
-                needed.
+                O atendimento para adultos é realizado através de anamnese, que
+                nada mais é do que uma conversa, na qual o paciente conta sobre
+                sua rotina, seu dia-a-dia, seus sentimentos, seus
+                comportamentos, conta um pouco de sua história de vida, para que
+                com esses elementos possa ser feita uma hipótese diagnóstica e,
+                se for necessário, iniciar uma terapia medicamentosa.
               </p>
-              <Link
-                href="#"
-                className="flex items-center font-medium text-[#6b2b2c]"
-              >
-                Learn more <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
             </CardContent>
           </Card>
 
@@ -81,20 +75,17 @@ export const Services = () => {
                 </svg>
               </div>
               <h3 className="mb-3 text-xl font-bold text-[#6b2b2c]">
-                Child Care
+                Atendimento de Crianças
               </h3>
               <p className="mb-6 text-gray-600">
-                Assessment through parent interviews, playful evaluation with
-                the child, and questionnaires for parents and schools to
-                identify potential diagnoses and determine appropriate
-                treatments.
+                O atendimento a esse público é feito através de anamnese com os
+                pais, avaliação lúdica do paciente (por meio de brincadeiras e
+                jogos) e, em alguns casos, são utilizados questionários a serem
+                preenchidos pelos pais/responsáveis e escola. Essa avaliação tem
+                como objetivo identificar um possível diagnóstico e encaminhar
+                aos tratamentos que serão necessários, avaliando também a
+                necessidade (ou não) de terapia medicamentosa.
               </p>
-              <Link
-                href="#"
-                className="flex items-center font-medium text-[#6b2b2c]"
-              >
-                Learn more <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
             </CardContent>
           </Card>
 
@@ -124,19 +115,17 @@ export const Services = () => {
                 </svg>
               </div>
               <h3 className="mb-3 text-xl font-bold text-[#6b2b2c]">
-                Adolescent Care
+                Atendimento de Adolescentes
               </h3>
               <p className="mb-6 text-gray-600">
-                Specialized assessment to distinguish between normal adolescent
-                development and potential mental health disorders, evaluating
-                the need for therapeutic interventions.
+                Nessa faixa etária é comum aparecerem mudanças de comportamento,
+                mudanças de humor e dificuldade de relacionamento com os pais. A
+                avaliação nesses casos tem como objetivo avaliar se esses
+                sintomas fazem parte do fenômeno da própria adolescência ou se
+                podem ser sinais de que há “algo a mais”, ou seja, se existe
+                algum Transtorno Mental e Emocional e se, em caso positivo,
+                avaliar se esse jovem terá necessidade de terapia medicamentosa.
               </p>
-              <Link
-                href="#"
-                className="flex items-center font-medium text-[#6b2b2c]"
-              >
-                Learn more <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
             </CardContent>
           </Card>
 
@@ -161,19 +150,19 @@ export const Services = () => {
                 </svg>
               </div>
               <h3 className="mb-3 text-xl font-bold text-[#6b2b2c]">
-                Autism Spectrum Disorder Assessment
+                Avaliação Diagnóstica para suspeita de Transtorno do Espectro do
+                Autismo
               </h3>
               <p className="mb-6 text-gray-600">
-                Structured evaluations for ASD in adolescents and adults, and
-                playful assessments for children, with referrals to partner
-                specialists when needed for comprehensive care.
+                A avaliação nesses casos consiste em Entrevista Estruturada ou
+                Semi-estruturada para avaliação de características de TEA em
+                adolescentes e adultos e avaliação lúdica para o público
+                infantil. Para poder realizar uma avaliação completa e
+                individualizada, em alguns casos casos o paciente será
+                encaminhado para realizar avaliações complementares com
+                profissionais parceiros (psicólogos, neuropsicólogos, terapeutas
+                ocupacionais, fonoaudiólogos).
               </p>
-              <Link
-                href="#"
-                className="flex items-center font-medium text-[#6b2b2c]"
-              >
-                Learn more <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
             </CardContent>
           </Card>
 
@@ -197,19 +186,15 @@ export const Services = () => {
                 </svg>
               </div>
               <h3 className="mb-3 text-xl font-bold text-[#6b2b2c]">
-                Online Care
+                OAtendimento Online
               </h3>
               <p className="mb-6 text-gray-600">
-                Remote consultations for patients unable to attend in-person,
-                primarily recommended for adolescents and adults depending on
-                individual circumstances.
+                Essa modalidade de atendimento tem como objetivo facilitar o
+                acesso à consulta em casos em que o paciente esteja
+                impossibilitado de comparecer presencialmente. É indicado,
+                preferencialmente, para adolescentes e adultos, a depender do
+                caso.
               </p>
-              <Link
-                href="#"
-                className="flex items-center font-medium text-[#6b2b2c]"
-              >
-                Learn more <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
             </CardContent>
           </Card>
         </div>

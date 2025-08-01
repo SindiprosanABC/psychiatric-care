@@ -94,13 +94,12 @@ export const FooterContact = () => {
                     <MapPin className="h-5 w-5 text-[#6b2b2c]" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-900">
-                      Office Location
-                    </h4>
+                    <h4 className="font-medium text-gray-900">Escritório</h4>
                     <p className="text-gray-600">
-                      123 Medical Plaza, Suite 456
+                      Rua Guaiaó, 66 – Conj. 1412 – Aparecida – Santos/SP
+                      PRAIAMAR CORPORATE
                     </p>
-                    <p className="text-gray-600">City, State 12345</p>
+                    <p className="text-gray-600">CLINICA SOLACIIS</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -109,7 +108,7 @@ export const FooterContact = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900">Phone</h4>
-                    <p className="text-gray-600">(123) 456-7890</p>
+                    <p className="text-gray-600">+55(13)-998083034</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -126,17 +125,21 @@ export const FooterContact = () => {
                     <Clock className="h-5 w-5 text-[#6b2b2c]" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-900">Office Hours</h4>
+                    <h4 className="font-medium text-gray-900">
+                      Horário de atendimento
+                    </h4>
                     <p className="text-gray-600">
-                      Monday - Friday: 9:00 AM - 5:00 PM
+                      Segunda feira - Sexta feira: 9:00 - 17:00
                     </p>
-                    <p className="text-gray-600">Saturday: 9:00 AM - 1:00 PM</p>
-                    <p className="text-gray-600">Sunday: Closed</p>
+                    <p className="text-gray-600">Sábado: 9:00 - 13:00</p>
+                    <p className="text-gray-600">Domingo: Fechado</p>
                   </div>
                 </div>
               </div>
               <div className="mt-8">
-                <h4 className="mb-4 font-medium text-gray-900">Follow Us</h4>
+                <h4 className="mb-4 font-medium text-gray-900">
+                  Siga nossas redes sociais
+                </h4>
                 <div className="flex gap-4">
                   <Link
                     href="#"

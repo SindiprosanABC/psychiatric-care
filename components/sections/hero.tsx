@@ -38,7 +38,7 @@ export const Hero = () => {
           <div className="relative w-full lg:w-1/2">
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-xl">
               <Image
-                src="/Image_fx.jpg"
+                src="/profile-image-2.jpeg"
                 alt="Doctor portrait"
                 fill
                 className="object-cover object-top"

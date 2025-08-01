@@ -9,18 +9,14 @@ export const Navbar = () => {
     <header className="sticky top-0 z-50 border-b bg-white">
       <div className="container mx-auto flex items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
-          <div className="relative flex h-20 w-20 items-center justify-center md:h-24 md:w-24">
+          <div className="relative flex h-20 w-32 items-center justify-center md:h-24 md:w-32">
             {/* <div className="absolute inset-0 rounded-full bg-[#6b2b2c]"></div>
             <div className="absolute inset-[3px] flex items-center justify-center rounded-full bg-white">
               <div className="h-6 w-6 rounded-full bg-[#ffe4cf] md:h-8 md:w-8"></div>
             </div> */}
-            <Image
-              src={"/sind-color.png"}
-              alt="logo SindiprosanABC"
-              width={600}
-              height={311}
-              className="w-full"
-            />
+            <p className="text-xl font-semibold text-[#6b2b2c]">
+              Dra. Flaviana Becker
+            </p>
           </div>
           {/* <div>
             <h1 className="text-lg font-bold text-[#6b2b2c] md:text-xl">

@@ -35,10 +35,10 @@ export const About = () => {
             <div className="relative">
               <div className="relative mx-auto h-64 w-64 overflow-hidden rounded-2xl md:h-80 md:w-96 lg:h-[30rem] lg:w-full xl:h-[36rem]">
                 <Image
-                  src="/Image_fx_2.jpg"
+                  src="/profile-image-1.jpeg"
                   alt="Doctor's portrait"
                   fill
-                  className="obje object-cover"
+                  className="object-cover object-center"
                 />
               </div>
               <div className="absolute -right-6 -bottom-6 rounded-xl bg-[#ffe4cf] p-4 shadow-lg">

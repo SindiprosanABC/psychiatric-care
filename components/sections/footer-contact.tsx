@@ -20,7 +20,7 @@ export const FooterContact = () => {
           <div className="grid grid-cols-1 items-start gap-12 md:grid-cols-2">
             <div>
               <h3 className="mb-6 text-2xl font-bold text-[#6b2b2c]">
-                Get in Touch
+                Entre em contato
               </h3>
               <form className="space-y-4">
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -86,7 +86,7 @@ export const FooterContact = () => {
             </div>
             <div>
               <h3 className="mb-6 text-2xl font-bold text-[#6b2b2c]">
-                Contact Information
+                Informações de contato
               </h3>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">

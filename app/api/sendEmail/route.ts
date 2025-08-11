@@ -51,12 +51,16 @@ export async function POST(request: NextRequest) {
 
     console.log("Email enviado com sucesso (via Gmail SMTP)!");
     return new Response("Email enviado com sucesso!", { status: 200 });
-  } catch (error: any) {
+  } catch (error) {
     console.error("Erro geral na API (Nodemailer/Gmail):", error);
     // Adapte a mensagem de erro para ser mais útil em caso de falha
-    return new Response(
-      `Erro ao enviar e-mail: ${error.message || "Erro desconhecido no servidor."}`,
-      { status: 500 },
-    );
+
+    // Type check the error to safely access the message property
+    const errorMessage =
+      error instanceof Error ? error.message : "Erro desconhecido no servidor.";
+
+    return new Response(`Erro ao enviar e-mail: ${errorMessage}`, {
+      status: 500,
+    });
   }
 }

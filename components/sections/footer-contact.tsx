@@ -15,7 +15,6 @@ import { Button } from "../button";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { useState } from "react";
 
 export const contactFormSchema = z.object({
   name: z.string().min(1, "Por favor, insira seu nome completo."),
@@ -30,7 +29,7 @@ export const contactFormSchema = z.object({
     .min(1, "Por favor, insira um número válido.")
     .regex(
       /^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/,
-      "Por favor, insira um número de telefone válido (ex: (XX) 9XXXX-XXXX).",
+      "Por favor, insira um número de telefone válido (ex: XX9XXXXXXXX).",
     ),
   messages: z.string().min(1, "Por favor, insira uma menssagem."),
 });
@@ -47,10 +46,7 @@ export const FooterContact = () => {
     resolver: zodResolver(contactFormSchema),
   });
 
-  const [loading, setLoading] = useState<boolean>(false);
-
   const onSubmit = async (data: TypeContactFormSchema) => {
-    setLoading(true);
     try {
       const formData = new FormData();
       formData.append("name", data.name);
@@ -76,8 +72,6 @@ export const FooterContact = () => {
       // });
       console.log(error);
       alert("Erro ao enviar o email. Por favor, tente novamente."); // Substituição simples para o toast
-    } finally {
-      setLoading(false);
     }
   };
 

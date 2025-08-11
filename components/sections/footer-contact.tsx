@@ -1,3 +1,4 @@
+"use client";
 import {
   Clock,
   Facebook,
@@ -11,8 +12,75 @@ import Link from "next/link";
 import { Input } from "../input";
 import { Textarea } from "../textarea";
 import { Button } from "../button";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { useState } from "react";
+
+export const contactFormSchema = z.object({
+  name: z.string().min(1, "Por favor, insira seu nome completo."),
+  email: z
+    .string()
+    .min(1, "Por favor, insira seu e-mail profissional.")
+    .email("Por favor, insira um e-mail válido."),
+  subject: z.string().min(1, "Por favor, insira um assunto"),
+  // Opcional: regex para telefone, você pode ajustá-la para ser mais ou menos rigorosa
+  phone: z
+    .string()
+    .min(1, "Por favor, insira um número válido.")
+    .regex(
+      /^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/,
+      "Por favor, insira um número de telefone válido (ex: (XX) 9XXXX-XXXX).",
+    ),
+  messages: z.string().min(1, "Por favor, insira uma menssagem."),
+});
+
+export type TypeContactFormSchema = z.infer<typeof contactFormSchema>;
 
 export const FooterContact = () => {
+  const {
+    formState: { errors },
+    register,
+    reset,
+    handleSubmit,
+  } = useForm<TypeContactFormSchema>({
+    resolver: zodResolver(contactFormSchema),
+  });
+
+  const [loading, setLoading] = useState<boolean>(false);
+
+  const onSubmit = async (data: TypeContactFormSchema) => {
+    setLoading(true);
+    try {
+      const formData = new FormData();
+      formData.append("name", data.name);
+      formData.append("email", data.email);
+      formData.append("subject", data.subject);
+      formData.append("phone", data.phone);
+      formData.append("message", data.messages);
+      const response = await fetch(`/api/sendEmail`, {
+        method: "POST",
+        body: formData,
+      });
+      if (!response.ok) {
+        throw new Error("Erro ao enviar o email.");
+      }
+      // toast({ description: "Email enviado com sucesso" });
+      alert("Email enviado com sucesso!"); // Substituição simples para o toast
+      reset(); // Limpa o formulário após o sucesso
+    } catch (error) {
+      // toast({
+      //   title: "Email não foi enviado",
+      //   description: "Aconteceu algo de errado",
+      //   variant: "destructive",
+      // });
+      console.log(error);
+      alert("Erro ao enviar o email. Por favor, tente novamente."); // Substituição simples para o toast
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <footer id="contact" className="bg-white py-20">
       <div className="container mx-auto px-4">
@@ -22,7 +90,7 @@ export const FooterContact = () => {
               <h3 className="mb-6 text-2xl font-bold text-[#6b2b2c]">
                 Entre em contato
               </h3>
-              <form className="space-y-4">
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <div>
                     <label
@@ -33,9 +101,15 @@ export const FooterContact = () => {
                     </label>
                     <Input
                       id="name"
-                      placeholder="Your name"
+                      placeholder="Seu nome"
                       className="border-gray-300 focus:border-[#6b2b2c] focus:ring-[#6b2b2c]"
+                      {...register("name")}
                     />
+                    {errors.name && (
+                      <p className="mt-1 text-sm text-red-500">
+                        {errors.name.message}
+                      </p>
+                    )}
                   </div>
                   <div>
                     <label
@@ -47,40 +121,77 @@ export const FooterContact = () => {
                     <Input
                       id="email"
                       type="email"
-                      placeholder="Your email"
+                      placeholder="Seu email"
                       className="border-gray-300 focus:border-[#6b2b2c] focus:ring-[#6b2b2c]"
+                      {...register("email")}
                     />
+                    {errors.email && (
+                      <p className="mt-1 text-sm text-red-500">
+                        {errors.email.message}
+                      </p>
+                    )}
                   </div>
+                </div>
+                <div>
+                  <label
+                    htmlFor="phone"
+                    className="mb-1 block text-sm font-medium text-gray-700"
+                  >
+                    Celular (WhastApp)
+                  </label>
+                  <Input
+                    id="phone"
+                    placeholder="Seu número"
+                    className="border-gray-300 focus:border-[#6b2b2c] focus:ring-[#6b2b2c]"
+                    {...register("phone")}
+                  />
+                  {errors.phone && (
+                    <p className="mt-1 text-sm text-red-500">
+                      {errors.phone.message}
+                    </p>
+                  )}
                 </div>
                 <div>
                   <label
                     htmlFor="subject"
                     className="mb-1 block text-sm font-medium text-gray-700"
                   >
-                    Subject
+                    Assunto
                   </label>
                   <Input
                     id="subject"
-                    placeholder="Subject"
+                    placeholder="Motivo ou assunto"
                     className="border-gray-300 focus:border-[#6b2b2c] focus:ring-[#6b2b2c]"
+                    {...register("subject")}
                   />
+                  {errors.subject && (
+                    <p className="mt-1 text-sm text-red-500">
+                      {errors.subject.message}
+                    </p>
+                  )}
                 </div>
                 <div>
                   <label
-                    htmlFor="message"
+                    htmlFor="messages"
                     className="mb-1 block text-sm font-medium text-gray-700"
                   >
                     Message
                   </label>
                   <Textarea
-                    id="message"
-                    placeholder="Your message"
+                    id="messages"
+                    placeholder="Do que você precisa ?"
                     className="border-gray-300 focus:border-[#6b2b2c] focus:ring-[#6b2b2c]"
                     rows={4}
+                    {...register("messages")}
                   />
+                  {errors.messages && (
+                    <p className="mt-1 text-sm text-red-500">
+                      {errors.messages.message}
+                    </p>
+                  )}
                 </div>
                 <Button className="w-full bg-[#6b2b2c] text-white hover:bg-[#5a2324]">
-                  Send Message
+                  Enviar email
                 </Button>
               </form>
             </div>

@@ -17,7 +17,7 @@ export const CallToAction = () => {
           href="https://wa.me/551338777780?text=Ol%C3%A1,%20estou%20iniciando%20uma%20conversa%20pelo%20site%20do%20SindiprosanABC"
           target="_blank"
         >
-          <Button className="rounded-full bg-[#ffe4cf] px-8 text-[#6b2b2c] hover:bg-[#361e1f] hover:text-[#ffe4cf]">
+          <Button className="rounded-full bg-[#ffe4cf] px-8 text-[#6b2b2c] hover:cursor-pointer hover:bg-[#361e1f] hover:text-[#ffe4cf]">
             Marque uma consulta <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </Link>

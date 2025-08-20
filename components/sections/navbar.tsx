@@ -69,8 +69,9 @@ export const Navbar = () => {
           <Link
             href="https://wa.me/551338777780?text=Ol%C3%A1,%20estou%20iniciando%20uma%20conversa%20pelo%20site%20do%20SindiprosanABC"
             target="_blank"
+            className=""
           >
-            <Button className="hidden bg-[#ffe4cf] text-[#6b2b2c] hover:bg-[#ffe4cf]/90 md:flex">
+            <Button className="hidden bg-[#ffe4cf] text-[#6b2b2c] hover:cursor-pointer hover:bg-[#ffe4cf]/90 md:flex">
               Contate Nos
             </Button>
           </Link>
@@ -81,7 +82,7 @@ export const Navbar = () => {
               <Button
                 variant="outline"
                 size="icon"
-                className="border-[#6b2b2c] text-[#6b2b2c] lg:hidden"
+                className="border-[#6b2b2c] text-[#6b2b2c] hover:cursor-pointer lg:hidden"
               >
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Open menu</span>
@@ -125,7 +126,7 @@ export const Navbar = () => {
                 >
                   Contato
                 </Link>
-                <Button className="mt-4 bg-[#ffe4cf] hover:bg-[#ffe4cf]/90">
+                <Button className="mt-4 bg-[#ffe4cf] hover:cursor-pointer hover:bg-[#ffe4cf]/90">
                   Join Now
                 </Button>
               </nav>

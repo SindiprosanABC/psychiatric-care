@@ -184,7 +184,7 @@ export const FooterContact = () => {
                     </p>
                   )}
                 </div>
-                <Button className="w-full bg-[#6b2b2c] text-white hover:bg-[#5a2324]">
+                <Button className="w-full bg-[#6b2b2c] text-white hover:cursor-pointer hover:bg-[#5a2324]">
                   Enviar email
                 </Button>
               </form>
@@ -222,7 +222,7 @@ export const FooterContact = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900">Email</h4>
-                    <p className="text-gray-600">contact@psychiatrist.com</p>
+                    <p className="text-gray-600">flaviana.dartora@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -247,21 +247,21 @@ export const FooterContact = () => {
                 </h4>
                 <div className="flex gap-4">
                   <Link
-                    href="#"
+                    href="https://www.instagram.com/flavianabecker/"
                     className="flex h-10 w-10 items-center justify-center rounded-full bg-[#ffe4cf] transition-colors hover:bg-[#6b2b2c] hover:text-white"
                   >
                     <Instagram className="h-5 w-5" />
                     <span className="sr-only">Instagram</span>
                   </Link>
                   <Link
-                    href="#"
+                    href="https://www.facebook.com/profile.php?id=100070321775537"
                     className="flex h-10 w-10 items-center justify-center rounded-full bg-[#ffe4cf] transition-colors hover:bg-[#6b2b2c] hover:text-white"
                   >
                     <Facebook className="h-5 w-5" />
                     <span className="sr-only">Facebook</span>
                   </Link>
                   <Link
-                    href="#"
+                    href="https://www.linkedin.com/in/dra-flaviana-becker-dartora-8b474a53/"
                     className="flex h-10 w-10 items-center justify-center rounded-full bg-[#ffe4cf] transition-colors hover:bg-[#6b2b2c] hover:text-white"
                   >
                     <Linkedin className="h-5 w-5" />

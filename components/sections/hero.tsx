@@ -20,7 +20,7 @@ export const Hero = () => {
                 href="https://wa.me/551338777780?text=Ol%C3%A1,%20estou%20iniciando%20uma%20conversa%20pelo%20site%20do%20SindiprosanABC"
                 target="_blank"
               >
-                <Button className="rounded-full bg-[#6b2b2c] px-8 text-white hover:bg-[#5a2324]">
+                <Button className="rounded-full bg-[#6b2b2c] px-8 text-white hover:cursor-pointer hover:bg-[#5a2324]">
                   Marque uma consulta <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
@@ -28,7 +28,7 @@ export const Hero = () => {
               <Link href={"/#about"}>
                 <Button
                   variant="outline"
-                  className="rounded-full border-[#6b2b2c] px-8 text-[#6b2b2c]"
+                  className="rounded-full border-[#6b2b2c] px-8 text-[#6b2b2c] hover:cursor-pointer"
                 >
                   Quem eu sou
                 </Button>

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const Experience = () => {
   return (
-    <section className="bg-white py-20">
+    <section id="benefits" className="bg-white py-28">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center gap-12 lg:flex-row">
           <div className="w-full lg:w-1/2">

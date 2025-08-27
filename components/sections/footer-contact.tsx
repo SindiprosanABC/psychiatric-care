@@ -222,7 +222,9 @@ export const FooterContact = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900">Email</h4>
-                    <p className="text-gray-600">flaviana.dartora@gmail.com</p>
+                    <p className="text-gray-600">
+                      secretariadraflaviana@gmail.com
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">

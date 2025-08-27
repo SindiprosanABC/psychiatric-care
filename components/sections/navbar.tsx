@@ -34,10 +34,10 @@ export const Navbar = () => {
             Home
           </Link>
           <Link
-            href="/#about"
+            href="/#services"
             className="font-medium text-[#6b2b2c] transition-colors hover:text-[#b77c5a]"
           >
-            Sobre Nós
+            Serviços
           </Link>
           <Link
             href="/#benefits"
@@ -46,16 +46,10 @@ export const Navbar = () => {
             Benefícios
           </Link>
           <Link
-            href="/#education"
+            href="/#about"
             className="font-medium text-[#6b2b2c] transition-colors hover:text-[#b77c5a]"
           >
-            Educação
-          </Link>
-          <Link
-            href="/#news"
-            className="font-medium text-[#6b2b2c] transition-colors hover:text-[#b77c5a]"
-          >
-            Notícias
+            Sobre
           </Link>
           <Link
             href="/#contact"

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const HowWork = () => {
   return (
-    <section id="online-care" className="bg-gray-50 py-20">
+    <section id="online-care" className="bg-gray-50 py-28">
       <div className="container mx-auto px-4">
         <div className="mx-auto mb-16 max-w-3xl text-center">
           <h2 className="mb-4 text-3xl font-bold text-[#6b2b2c]">

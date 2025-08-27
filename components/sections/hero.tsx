@@ -17,7 +17,7 @@ export const Hero = () => {
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
               <Link
-                href="https://wa.me/551338777780?text=Ol%C3%A1,%20estou%20iniciando%20uma%20conversa%20pelo%20site%20do%20SindiprosanABC"
+                href="https://wa.me/5513998083034?text=Ol%C3%A1,%20estou%20iniciando%20uma%20conversa%20pelo%20site%20do%20SindiprosanABC"
                 target="_blank"
               >
                 <Button className="rounded-full bg-[#6b2b2c] px-8 text-white hover:cursor-pointer hover:bg-[#5a2324]">
@@ -50,11 +50,9 @@ export const Hero = () => {
               </div>
               <div>
                 <p className="text-sm font-medium text-gray-600">
-                  Next Available
+                  Próxima consulta
                 </p>
-                <p className="font-semibold text-[#6b2b2c]">
-                  Tomorrow, 10:00 AM
-                </p>
+                <p className="font-semibold text-[#6b2b2c]">Amanhã, 10:00</p>
               </div>
             </div>
           </div>

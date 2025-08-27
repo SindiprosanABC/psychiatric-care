@@ -67,7 +67,7 @@ export const Navbar = () => {
 
         <div className="flex items-center gap-2">
           <Link
-            href="https://wa.me/551338777780?text=Ol%C3%A1,%20estou%20iniciando%20uma%20conversa%20pelo%20site%20do%20SindiprosanABC"
+            href="https://wa.me/5513998083034?text=Ol%C3%A1,%20estou%20iniciando%20uma%20conversa%20pelo%20site%20do%20SindiprosanABC"
             target="_blank"
             className=""
           >

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "../button";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "../sheet";
+import Image from "next/image";
 
 export const Navbar = () => {
   return (
@@ -9,20 +10,13 @@ export const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
           <div className="relative flex h-20 w-32 items-center justify-center md:h-24 md:w-32">
-            {/* <div className="absolute inset-0 rounded-full bg-[#6b2b2c]"></div>
-            <div className="absolute inset-[3px] flex items-center justify-center rounded-full bg-white">
-              <div className="h-6 w-6 rounded-full bg-[#ffe4cf] md:h-8 md:w-8"></div>
-            </div> */}
-            <p className="text-xl font-semibold text-[#6b2b2c]">
-              Dra. Flaviana Becker
-            </p>
+            <Image
+              src={"/logo-fraviana.png"}
+              width={600}
+              height={600}
+              alt="logo marca Flaviana psiquiatra"
+            />
           </div>
-          {/* <div>
-            <h1 className="text-lg font-bold text-[#6b2b2c] md:text-xl">
-              PharmReps
-            </h1>
-            <p className="-mt-1 text-xs font-medium text-[#ffe4cf]">UNION</p>
-          </div> */}
         </Link>
 
         {/* Desktop Navigation */}

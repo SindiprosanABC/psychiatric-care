@@ -274,7 +274,7 @@ export const FooterContact = () => {
           <div className="mt-16 border-t border-gray-200 pt-8">
             <div className="flex flex-col items-center justify-between md:flex-row">
               <div className="mb-4 text-xl font-bold text-[#6b2b2c] md:mb-0">
-                Dr. Psychiatrist
+                Dr. Flaviana Becker Dartora - Psiquiatra
               </div>
               <div className="text-sm text-gray-500">
                 © {new Date().getFullYear()} Child and Adolescent Psychiatry.

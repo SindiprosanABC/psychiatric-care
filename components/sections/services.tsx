@@ -186,7 +186,7 @@ export const Services = () => {
                 </svg>
               </div>
               <h3 className="mb-3 text-xl font-bold text-[#6b2b2c]">
-                OAtendimento Online
+                Atendimento Online
               </h3>
               <p className="mb-6 text-gray-600">
                 Essa modalidade de atendimento tem como objetivo facilitar o

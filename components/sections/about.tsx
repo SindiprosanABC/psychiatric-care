@@ -43,7 +43,7 @@ export const About = () => {
               </div>
               <div className="absolute -right-6 -bottom-6 rounded-xl bg-[#ffe4cf] p-4 shadow-lg">
                 <div className="font-medium text-[#6b2b2c]">
-                  Dr. Psychiatrist
+                  Dr. Flaviana Becker Dartora - Psiquiatra
                 </div>
                 <div className="text-sm text-gray-600">
                   Child & Adolescent Specialist

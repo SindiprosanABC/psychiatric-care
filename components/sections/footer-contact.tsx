@@ -236,10 +236,8 @@ export const FooterContact = () => {
                       Horário de atendimento
                     </h4>
                     <p className="text-gray-600">
-                      Segunda feira - Sexta feira: 9:00 - 17:00
+                      Atendemos somente por hora marcada, marque um horário!
                     </p>
-                    <p className="text-gray-600">Sábado: 9:00 - 13:00</p>
-                    <p className="text-gray-600">Domingo: Fechado</p>
                   </div>
                 </div>
               </div>

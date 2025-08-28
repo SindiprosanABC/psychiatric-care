@@ -49,10 +49,10 @@ export const Hero = () => {
                 <Calendar className="h-6 w-6 text-[#6b2b2c]" />
               </div>
               <div>
-                <p className="text-sm font-medium text-gray-600">
-                  Próxima consulta
+                <p className="text-sm font-medium text-gray-600">Atendimento</p>
+                <p className="font-semibold text-[#6b2b2c]">
+                  Marque um horário
                 </p>
-                <p className="font-semibold text-[#6b2b2c]">Amanhã, 10:00</p>
               </div>
             </div>
           </div>

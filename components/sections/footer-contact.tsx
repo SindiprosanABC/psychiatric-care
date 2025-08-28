@@ -277,8 +277,8 @@ export const FooterContact = () => {
                 Dr. Flaviana Becker Dartora - Psiquiatra
               </div>
               <div className="text-sm text-gray-500">
-                © {new Date().getFullYear()} Child and Adolescent Psychiatry.
-                All rights reserved.
+                © {new Date().getFullYear()} Psiquiatra para crianças,
+                adolescentes e adultos. Todos os direitos reservados.
               </div>
             </div>
           </div>

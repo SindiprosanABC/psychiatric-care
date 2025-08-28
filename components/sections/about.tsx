@@ -46,7 +46,7 @@ export const About = () => {
                   Dr. Flaviana Becker Dartora - Psiquiatra
                 </div>
                 <div className="text-sm text-gray-600">
-                  Child & Adolescent Specialist
+                  Psiquiatra para crianças, adolescentes e adultos.
                 </div>
               </div>
             </div>

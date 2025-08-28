@@ -1,5 +1,5 @@
 import { Card, CardContent } from "../card";
-import { Users, Baby, UserCheck, Brain, Monitor } from "lucide-react";
+import { Users, Baby, UserCheck, Monitor, PersonStanding } from "lucide-react";
 
 export const Services = () => {
   return (
@@ -77,7 +77,7 @@ export const Services = () => {
           <Card className="border-none shadow-md transition-shadow duration-300 hover:shadow-xl">
             <CardContent className="p-8">
               <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-[#ffe4cf]">
-                <Brain className="h-6 w-6 text-[#6b2b2c]" />
+                <PersonStanding className="h-6 w-6 text-[#6b2b2c]" />
               </div>
               <h3 className="mb-3 text-xl font-bold text-[#6b2b2c]">
                 Avaliação Diagnóstica para suspeita de Transtorno do Espectro do

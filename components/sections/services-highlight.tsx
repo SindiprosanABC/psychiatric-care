@@ -29,7 +29,9 @@ export const ServiceHighlights = () => {
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#ffe4cf]">
                   <MessageSquare className="h-6 w-6 text-[#6b2b2c]" />
                 </div>
-                <h3 className="mb-1 font-semibold">Sessões de Terapia</h3>
+                <h3 className="mb-1 font-semibold">
+                  Atendimento Personalizado
+                </h3>
                 <p className="text-sm text-gray-500">
                   Ambiente de apoio para todas as faixas etárias
                 </p>

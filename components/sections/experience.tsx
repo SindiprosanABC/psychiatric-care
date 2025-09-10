@@ -9,10 +9,11 @@ export const Experience = () => {
         <div className="flex flex-col items-center gap-12 lg:flex-row">
           <div className="w-full lg:w-1/2">
             <h2 className="mb-6 text-3xl font-bold text-[#6b2b2c]">
-              Uma Rica Experiência para Ajudar Você a se Curar
+              Uma rica experiência para ajudar você a resgatar a sua saúde
+              mental
             </h2>
             <p className="mb-6 text-gray-600">
-              Como psiquiatra especializado em crianças e adolescentes, dediquei
+              Como psiquiatra especializada em crianças e adolescentes, dediquei
               minha carreira a compreender e tratar os desafios singulares de
               saúde mental enfrentados por jovens e suas famílias.
             </p>
@@ -35,7 +36,7 @@ export const Experience = () => {
             <div className="relative mx-auto h-64 w-64 overflow-hidden rounded-full border-8 border-[#ffe4cf]">
               <div className="absolute inset-0 flex items-center justify-center rounded-full bg-[#ffe4cf]">
                 <div className="text-center">
-                  <div className="text-5xl font-bold text-[#6b2b2c]">10+</div>
+                  <div className="text-5xl font-bold text-[#6b2b2c]">+20</div>
                   <div className="text-sm font-medium text-[#6b2b2c]">
                     Anos de experiência
                   </div>

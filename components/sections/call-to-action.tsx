@@ -14,7 +14,7 @@ export const CallToAction = () => {
           melhor saúde mental e bem-estar emocional.
         </p>
         <Link
-          href="https://wa.me/5513998083034?text=Ol%C3%A1,%20estou%20iniciando%20uma%20conversa%20pelo%20site%20do%20SindiprosanABC"
+          href="https://wa.me/5513998083034?text=Ol%C3%A1,%20estou%20iniciando%20uma%20conversa%20pelo%20site%20da%20Doutora Flaviana Becker"
           target="_blank"
         >
           <Button className="rounded-full bg-[#ffe4cf] px-8 text-[#6b2b2c] hover:cursor-pointer hover:bg-[#361e1f] hover:text-[#ffe4cf]">

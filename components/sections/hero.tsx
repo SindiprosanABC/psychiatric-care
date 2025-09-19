@@ -17,7 +17,7 @@ export const Hero = () => {
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
               <Link
-                href="https://wa.me/5513998083034?text=Ol%C3%A1,%20estou%20iniciando%20uma%20conversa%20pelo%20site%20do%20SindiprosanABC"
+                href="https://wa.me/5513998083034?text=Ol%C3%A1,%20estou%20iniciando%20uma%20conversa%20pelo%20site%20da%20Doutora Flaviana Becker"
                 target="_blank"
               >
                 <Button className="rounded-full bg-[#6b2b2c] px-8 text-white hover:cursor-pointer hover:bg-[#5a2324]">

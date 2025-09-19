@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "../button";
 import Link from "next/link";
+import Image from "next/image";
 
 export const Experience = () => {
   return (
@@ -24,7 +25,7 @@ export const Experience = () => {
               considerando seus contextos familiares, escolares e sociais.
             </p>
             <Link
-              href="https://wa.me/5513998083034?text=Ol%C3%A1,%20estou%20iniciando%20uma%20conversa%20pelo%20site%20do%20SindiprosanABC"
+              href="https://wa.me/5513998083034?text=Ol%C3%A1,%20estou%20iniciando%20uma%20conversa%20pelo%20site%20da%20Doutora Flaviana Becker"
               target="_blank"
             >
               <Button className="rounded-full bg-[#6b2b2c] px-8 text-white hover:cursor-pointer hover:bg-[#5a2324]">
@@ -33,15 +34,13 @@ export const Experience = () => {
             </Link>
           </div>
           <div className="relative w-full lg:w-1/2">
-            <div className="relative mx-auto h-64 w-64 overflow-hidden rounded-full border-8 border-[#ffe4cf]">
-              <div className="absolute inset-0 flex items-center justify-center rounded-full bg-[#ffe4cf]">
-                <div className="text-center">
-                  <div className="text-5xl font-bold text-[#6b2b2c]">+20</div>
-                  <div className="text-sm font-medium text-[#6b2b2c]">
-                    Anos de experiência
-                  </div>
-                </div>
-              </div>
+            <div className="relative aspect-square w-full overflow-hidden rounded-2xl shadow-xl">
+              <Image
+                src="/flaviana.jpeg"
+                alt="Doctor portrait"
+                fill
+                className="object-cover object-center"
+              />
             </div>
           </div>
         </div>

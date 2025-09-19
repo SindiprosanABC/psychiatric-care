@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Calendar } from "lucide-react";
 import { Button } from "../button";
 import Link from "next/link";
 import Image from "next/image";
@@ -41,6 +41,13 @@ export const Experience = () => {
                 fill
                 className="object-cover object-center"
               />
+            </div>
+            <div className="absolute -bottom-6 -left-6 flex items-center gap-3 rounded-xl bg-white p-4 shadow-lg">
+              <div>
+                <p className="font-semibold text-[#6b2b2c]">
+                  +20 anos de experiência
+                </p>
+              </div>
             </div>
           </div>
         </div>

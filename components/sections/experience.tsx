@@ -1,4 +1,4 @@
-import { ArrowRight, Calendar } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "../button";
 import Link from "next/link";
 import Image from "next/image";

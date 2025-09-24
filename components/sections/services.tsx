@@ -10,7 +10,7 @@ export const Services = () => {
             Nossos serviços
           </h2>
           <p className="text-gray-600">
-            Cuidados especializado para diferentes grupos de idade
+            Cuidado especializado para diferentes grupos de idade
           </p>
         </div>
 
@@ -88,10 +88,10 @@ export const Services = () => {
                 Semi-estruturada para avaliação de características de TEA em
                 adolescentes e adultos e avaliação lúdica para o público
                 infantil. Para poder realizar uma avaliação completa e
-                individualizada, em alguns casos casos o paciente será
-                encaminhado para realizar avaliações complementares com
-                profissionais parceiros (psicólogos, neuropsicólogos, terapeutas
-                ocupacionais, fonoaudiólogos).
+                individualizada, em alguns casos o paciente será encaminhado
+                para realizar avaliações complementares com profissionais
+                parceiros (psicólogos, neuropsicólogos, terapeutas ocupacionais,
+                fonoaudiólogos).
               </p>
             </CardContent>
           </Card>

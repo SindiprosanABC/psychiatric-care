@@ -33,3 +33,8 @@ export async function getNewsCollection() {
   const { db } = await connectToDatabase();
   return db.collection("news_articles");
 }
+
+export async function getReviewsCollection() {
+  const { db } = await connectToDatabase();
+  return db.collection("google_reviews");
+}

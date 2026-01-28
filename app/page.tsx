@@ -6,6 +6,7 @@ import { HowWork } from "@/components/sections/how-work";
 import { Services } from "@/components/sections/services";
 import { ServiceHighlights } from "@/components/sections/services-highlight";
 import { TestimonialSection } from "@/components/sections/testimonial";
+import { LatestNews } from "@/components/sections/latest-news";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <HowWork />
       <About />
       <TestimonialSection />
+      <LatestNews />
       <CallToAction />
     </main>
   );

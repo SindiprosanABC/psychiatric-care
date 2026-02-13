@@ -114,9 +114,7 @@ export const LatestNews = () => {
                     </CardContent>
                     <CardFooter className="pt-0">
                       <Link
-                        href={newsItem.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href={`/noticias/${newsItem.slug}`}
                         className="w-full"
                       >
                         <Button

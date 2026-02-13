@@ -38,3 +38,13 @@ export async function getReviewsCollection() {
   const { db } = await connectToDatabase();
   return db.collection("google_reviews");
 }
+
+export async function getTagsCollection() {
+  const { db } = await connectToDatabase();
+  return db.collection("news_tags");
+}
+
+export async function getAdminUsersCollection() {
+  const { db } = await connectToDatabase();
+  return db.collection("admin_users");
+}

@@ -1,9 +1,6 @@
-import { writeFile, mkdir } from 'fs/promises';
-import { join } from 'path';
+import { put, del } from '@vercel/blob';
 import { randomBytes } from 'crypto';
-import { existsSync } from 'fs';
 
-const UPLOAD_DIR = join(process.cwd(), 'public', 'uploads', 'news');
 const ALLOWED_TYPES = ['image/jpeg', 'image/png', 'image/webp'];
 const MAX_FILE_SIZE = 2 * 1024 * 1024; // 2MB
 
@@ -38,36 +35,42 @@ export function generateFilename(originalName: string): string {
 export async function saveUploadedFile(
   file: File
 ): Promise<UploadResult | UploadError> {
-  // Validação
-  const validationError = validateFile(file);
-  if (validationError) {
-    return { error: validationError };
+  try {
+    // Validação
+    const validationError = validateFile(file);
+    if (validationError) {
+      return { error: validationError };
+    }
+
+    // Gera nome único
+    const filename = generateFilename(file.name);
+
+    // Prepara arquivo para upload
+    const bytes = await file.arrayBuffer();
+    const buffer = Buffer.from(bytes);
+
+    // Upload para Vercel Blob
+    const blob = await put(`news/${filename}`, buffer, {
+      access: 'public',
+      contentType: file.type,
+    });
+
+    return {
+      url: blob.url,
+      filename: filename,
+    };
+  } catch (error) {
+    console.error('Blob upload error:', error);
+    return { error: 'Erro ao fazer upload do arquivo' };
   }
-
-  // Garante que o diretório existe
-  if (!existsSync(UPLOAD_DIR)) {
-    await mkdir(UPLOAD_DIR, { recursive: true });
-  }
-
-  // Gera nome único
-  const filename = generateFilename(file.name);
-  const filePath = join(UPLOAD_DIR, filename);
-
-  // Salva arquivo
-  const bytes = await file.arrayBuffer();
-  const buffer = Buffer.from(bytes);
-
-  await writeFile(filePath, buffer);
-
-  return {
-    url: `/uploads/news/${filename}`,
-    filename,
-  };
 }
 
-// Opcional: Função para deletar arquivo
-export async function deleteUploadedFile(filename: string): Promise<void> {
-  const filePath = join(UPLOAD_DIR, filename);
-  const { unlink } = await import('fs/promises');
-  await unlink(filePath);
+// Função para deletar arquivo do Vercel Blob
+export async function deleteUploadedFile(url: string): Promise<void> {
+  try {
+    await del(url);
+  } catch (error) {
+    console.error('Blob delete error:', error);
+    throw error;
+  }
 }

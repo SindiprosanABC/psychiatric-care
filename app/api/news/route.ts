@@ -305,14 +305,11 @@ export async function DELETE(request: NextRequest) {
       );
     }
 
-    // Tenta deletar a imagem associada (se existir e for do upload local)
-    if (newsItem.imageSrc && newsItem.imageSrc.startsWith('/uploads/news/')) {
+    // Tenta deletar a imagem associada (se existir e for do Vercel Blob)
+    if (newsItem.imageSrc && newsItem.imageSrc.includes('blob.vercel-storage.com')) {
       try {
-        const filename = newsItem.imageSrc.split('/').pop();
-        if (filename) {
-          const { deleteUploadedFile } = await import('@/lib/upload');
-          await deleteUploadedFile(filename);
-        }
+        const { deleteUploadedFile } = await import('@/lib/upload');
+        await deleteUploadedFile(newsItem.imageSrc);
       } catch (uploadError) {
         // Não falha a operação se a imagem não puder ser deletada
         console.warn('Erro ao deletar imagem:', uploadError);

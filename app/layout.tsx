@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { FooterContact } from "@/components/sections/footer-contact";
-import { Navbar } from "@/components/sections/navbar";
-import { FloatingWhatsAppButton } from "@/components/floating-whatsapp-button";
+import { AuthProvider } from "@/components/providers/session-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -83,10 +81,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
-        {children}
-        <FooterContact />
-        <FloatingWhatsAppButton />
+        <AuthProvider>
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );

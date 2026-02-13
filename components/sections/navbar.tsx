@@ -40,6 +40,12 @@ export const Navbar = () => {
             Benefícios
           </Link>
           <Link
+            href="/#news"
+            className="font-medium text-[#6b2b2c] transition-colors hover:text-[#b77c5a]"
+          >
+            Notícias
+          </Link>
+          <Link
             href="/#about"
             className="font-medium text-[#6b2b2c] transition-colors hover:text-[#b77c5a]"
           >

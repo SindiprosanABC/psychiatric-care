@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import { ObjectId } from 'mongodb';
 import { Button } from '@/components/ui/button';
 import {
   Carousel,
@@ -18,19 +19,15 @@ import {
   CardTitle,
 } from '@/components/card';
 import type { News } from '@/lib/types/news';
+import { getNewsCollection } from '@/lib/mongodb';
 
 // Fetch da notícia por slug
 async function fetchNewsBySlug(slug: string): Promise<News | null> {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
-    const res = await fetch(`${baseUrl}/api/news?slug=${slug}`, {
-      cache: 'no-store',
-    });
-    console.log('Fetched news for slug:', slug, res);
-    if (!res.ok) return null;
-
-    const data = await res.json();
-    return data.news;
+    const collection = await getNewsCollection();
+    const article = await collection.findOne({ slug, isActive: true });
+    if (!article) return null;
+    return article as unknown as News;
   } catch (error) {
     console.error('Error fetching news:', error);
     return null;
@@ -44,37 +41,37 @@ async function fetchRelatedNews(
   excludeId: string
 ): Promise<News[]> {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
+    const collection = await getNewsCollection();
+    const excludeObjectId = excludeId ? new ObjectId(excludeId) : null;
+
+    const baseFilter: Record<string, unknown> = { isActive: true };
+    if (excludeObjectId) baseFilter._id = { $ne: excludeObjectId };
 
     // Busca por tag
-    const resByTag = await fetch(
-      `${baseUrl}/api/news?tag=${tag}&limit=6&category=${category}`,
-      { cache: 'no-store' }
-    );
+    const byTag = await collection
+      .find({ ...baseFilter, tag })
+      .sort({ publishedAt: -1 })
+      .limit(6)
+      .toArray();
 
-    const dataByTag = await resByTag.json();
-    let related = (dataByTag.news || []).filter(
-      (n: News) => n._id !== excludeId
-    );
+    let related = byTag;
 
     // Se não tiver pelo menos 3, complementa com categoria
     if (related.length < 3) {
-      const resByCategory = await fetch(
-        `${baseUrl}/api/news?category=${category}&limit=6`,
-        { cache: 'no-store' }
-      );
-      const dataByCategory = await resByCategory.json();
-      const additional = (dataByCategory.news || [])
-        .filter(
-          (n: News) =>
-            n._id !== excludeId && !related.find((r: News) => r._id === n._id)
-        )
-        .slice(0, 6 - related.length);
-
-      related = [...related, ...additional];
+      const existingIds = related.map((r) => r._id);
+      const byCategory = await collection
+        .find({
+          ...baseFilter,
+          category,
+          _id: { $nin: existingIds },
+        })
+        .sort({ publishedAt: -1 })
+        .limit(6 - related.length)
+        .toArray();
+      related = [...related, ...byCategory];
     }
 
-    return related.slice(0, 6);
+    return related.slice(0, 6) as unknown as News[];
   } catch (error) {
     console.error('Error fetching related news:', error);
     return [];
